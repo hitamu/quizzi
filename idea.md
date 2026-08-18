@@ -143,3 +143,50 @@ Mô hình **Dual-Layer Async Adaptive Engine**:
 * **Lớp Client ($0\text{ms}$):** Bé trả lời đúng 3 câu liên tiếp $\rightarrow$ Tự động nâng Level. Bé trả lời sai $\rightarrow$ Hiển thị hiệu ứng sai ngay lập tức và gửi Event chạy ngầm sang DSH.
 * **Lớp DSH Realtime (Async Smart Rescue):** Phân tích ngầm tâm lý làm bài. Nếu bé thực sự kẹt kiến thức $\rightarrow$ Đặt sẵn (Prefetch) Hint trúng lỗi sai để hiển thị tức thì $0\text{ms}$.
 * **Lớp DSH Batch (Daily Evaluation):** Cuối ngày, LLM quét toàn bộ nhật ký để chốt Level chính thức cho ngày hôm sau và xuất báo cáo cho Phụ huynh.
+
+
+Dựa trên toàn bộ kiến trúc **Dual-Layer Async Adaptive Engine** và tính năng **Sinh Quiz động (Dynamic Topic Quiz Generator)** đã thiết kế cho [quizzi](https://github.com/hitamu/quizzi), hệ thống Backend DSH (dựa trên Cordis Kernel) sẽ cần **5 Plugin chuyên trách** sau:
+
+---
+
+**1. DSH Dynamic Quiz Generator Plugin (`dsh-dynamic-quiz`)**
+
+* **Nhiệm vụ:** Tiếp nhận bất kỳ chủ đề nào (ví dụ: *"Cộng trừ trong phạm vi 20"*, *"Đếm hoa quả"*) cùng Level tương ứng từ Frontend/Giáo viên, sau đó điều khiển LLM sinh ra ngân hàng câu hỏi trắc nghiệm dưới dạng JSON chuẩn.
+* **Đặc điểm:** Tự động phân cấp độ khó linh hoạt theo chủ đề (Level 1: Trực quan/tròn chục, Level 2: Điền số/có nhớ, Level 3: Bài toán lời văn ngắn).
+
+**2. DSH Smart Rescue Plugin (`dsh-smart-rescue`)**
+
+* **Nhiệm vụ:** Nhận dữ liệu event câu sai từ [quizzi](https://github.com/hitamu/quizzi) theo cơ chế bất đồng bộ (Async Background), phân tích ngữ cảnh hành vi (thời gian suy nghĩ, số lần đổi đáp án) để quyết định xem bé có thực sự cần cứu nguy hay không.
+* **Đặc điểm:** Nếu bé hoang mang/kẹt kiến thức, Plugin sinh sẵn Hint cá nhân hóa trúng bản chất lỗi sai (nhầm dấu $+/-$) và gửi về cache bộ nhớ tạm (Prefetch) để hiển thị tức thì $0\text{ms}$.
+
+**3. DSH Batch Adaptive Plugin (`dsh-batch-adaptive`)**
+
+* **Nhiệm vụ:** Quét toàn bộ nhật ký làm bài của bé vào cuối ngày/cuối tuần (Cronjob) để LLM đánh giá toàn diện tiến bộ học tập.
+* **Đặc điểm:** Chốt Level khởi đầu chính thức cho ngày làm bài tiếp theo và tự động tạo bài Báo cáo Tiến độ (Progress Report) gửi cho phụ huynh.
+
+**4. Storage & Session Log Plugin (DSH Core Ecosystem)**
+
+* **Nhiệm vụ:** Lưu trữ vết học tập (Trajectory Log) của bé dưới dạng Append-only Event Stream.
+* **Đặc điểm:** Cung cấp dữ liệu lịch sử làm bài chuẩn xác cho cả `dsh-smart-rescue` lẫn `dsh-batch-adaptive` mà không gây phình to bộ nhớ Frontend.
+
+**5. LLM Provider Plugin (DSH Core / Cordis Model Plugin)**
+
+* **Nhiệm vụ:** Đóng vai trò Cầu nối (Bridge) đăng ký service `ctx.get('llm')` vào Cordis Context, chịu trách nhiệm kết nối, cấu hình tham số (`temperature`, `token limit`) và gọi trực tiếp API của DeepSeek Model.
+
+---
+
+**Sơ đồ Phân bổ Chức năng các Plugin trong DSH Runtime**
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        Cordis Kernel Context                           │
+├────────────────────────────────────────────────────────────────────────┤
+│  [LLM Provider Plugin]         ──► Quản lý API & Model DeepSeek        │
+│  [Storage & Session Log]       ──► Quản lý Log & Cache dữ liệu         │
+├────────────────────────────────────────────────────────────────────────┤
+│  [dsh-dynamic-quiz]            ──► Sinh Quiz theo Topic & Level        │
+│  [dsh-smart-rescue] (Async)    ──► Cứu nguy & Prefetch Hint (0ms UI)   │
+│  [dsh-batch-adaptive] (Cron)   ──► Chốt Level ngày sau & Báo cáo bố mẹ │
+└────────────────────────────────────────────────────────────────────────┘
+
+```
