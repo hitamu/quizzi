@@ -1,0 +1,54 @@
+{
+  "id": "doc-hieu-be-linh",
+  "title": "Bé Linh và quả táo",
+  "subject": "Đọc hiểu",
+  "theme": { "color": "#00a8a8", "color2": "#d6f5f5", "emoji": "📖" },
+  "passage": "Bé Linh có một cái rổ nhỏ. Một hôm mẹ đưa cho Linh ba quả táo đỏ. Linh đem rổ ra sân và chia táo cho các bạn. Các bạn rất thích táo của Linh.",
+  "questions": [
+    {
+      "type": "select",
+      "prompt": { "text": "Mẹ đưa cho Linh mấy quả táo?" },
+      "options": [
+        { "label": "Hai" },
+        { "label": "Ba", "correct": true },
+        { "label": "Bốn" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Táo của Linh có màu gì?" },
+      "options": [
+        { "label": "Xanh" },
+        { "label": "Đỏ", "correct": true },
+        { "label": "Vàng" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Linh đem rổ ra đâu?" },
+      "options": [
+        { "label": "Ra sân", "correct": true },
+        { "label": "Vào nhà" },
+        { "label": "Lên gác" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Linh chia táo cho ai?" },
+      "options": [
+        { "label": "Cho các bạn", "correct": true },
+        { "label": "Cho con chó" },
+        { "label": "Cho mẹ" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Các bạn cảm thấy thế nào về táo của Linh?" },
+      "options": [
+        { "label": "Không thích" },
+        { "label": "Rất thích", "correct": true },
+        { "label": "Sợ ăn" }
+      ]
+    }
+  ]
+}
