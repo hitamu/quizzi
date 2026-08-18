@@ -1,0 +1,54 @@
+{
+  "id": "doc-hieu-an-hoa",
+  "title": "Bé An và bông hoa",
+  "subject": "Đọc hiểu",
+  "theme": { "color": "#00a8a8", "color2": "#d6f5f5", "emoji": "📖" },
+  "passage": "Bé An tìm thấy một bông hoa màu hồng trong vườn. Cô bé chăm sóc bông hoa mỗi ngày: tưới nước và đặt ở nơi có nắng. Một buổi sáng, bông hoa nở rộ và An rất vui.",
+  "questions": [
+    {
+      "type": "select",
+      "prompt": { "text": "Bé An tìm thấy bông hoa ở đâu?" },
+      "options": [
+        { "label": "Trong vườn", "correct": true },
+        { "label": "Trên bàn" },
+        { "label": "Trong nhà" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Bông hoa có màu gì?" },
+      "options": [
+        { "label": "Màu đỏ" },
+        { "label": "Màu vàng" },
+        { "label": "Màu hồng", "correct": true }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "An chăm sóc bông hoa bằng cách nào?" },
+      "options": [
+        { "label": "Tưới nước", "correct": true },
+        { "label": "Cho ăn" },
+        { "label": "Đeo vòng" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Bông hoa nở khi nào?" },
+      "options": [
+        { "label": "Một buổi sáng", "correct": true },
+        { "label": "Một buổi tối" },
+        { "label": "Một buổi trưa" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "An cảm thấy thế nào khi bông hoa nở?" },
+      "options": [
+        { "label": "Rất vui", "correct": true },
+        { "label": "Buồn" },
+        { "label": "Giận" }
+      ]
+    }
+  ]
+}
