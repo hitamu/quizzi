@@ -1,0 +1,54 @@
+{
+  "id": "doc-hieu-be-tuan",
+  "title": "Bé Tuấn và con vịt",
+  "subject": "Đọc hiểu",
+  "theme": { "color": "#00a8a8", "color2": "#d6f5f5", "emoji": "📖" },
+  "passage": "Bé Tuấn nuôi một con vịt nhỏ. Mỗi sáng Tuấn cho vịt ăn và mang ra ao để vịt bơi. Con vịt bơi rất nhanh và kêu \"cạp cạp\". Tuấn rất thích chơi với vịt.",
+  "questions": [
+    {
+      "type": "select",
+      "prompt": { "text": "Bé Tuấn nuôi con gì?" },
+      "options": [
+        { "label": "Con chó" },
+        { "label": "Con vịt", "correct": true },
+        { "label": "Con mèo" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Tuấn cho vịt ăn vào lúc nào?" },
+      "options": [
+        { "label": "Mỗi sáng", "correct": true },
+        { "label": "Mỗi tối" },
+        { "label": "Mỗi trưa" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Tuấn mang vịt ra đâu để vịt bơi?" },
+      "options": [
+        { "label": "Ra ao", "correct": true },
+        { "label": "Ra sân" },
+        { "label": "Vào nhà" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Con vịt kêu như thế nào?" },
+      "options": [
+        { "label": "Meo meo" },
+        { "label": "Gâu gâu" },
+        { "label": "Cạp cạp", "correct": true }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Tuấn cảm thấy thế nào khi chơi với vịt?" },
+      "options": [
+        { "label": "Buồn" },
+        { "label": "Sợ" },
+        { "label": "Thích", "correct": true }
+      ]
+    }
+  ]
+}
