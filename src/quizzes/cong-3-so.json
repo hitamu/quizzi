@@ -1,0 +1,102 @@
+{
+  "id": "cong-3-so",
+  "title": "Cộng 3 số",
+  "subject": "Toán",
+  "theme": { "color": "#ff8c42", "color2": "#ffe8d6", "emoji": "➕" },
+  "questions": [
+    {
+      "type": "select",
+      "prompt": { "text": "1 + 1 + 1 = ?" },
+      "options": [
+        { "label": "2" },
+        { "label": "3", "correct": true },
+        { "label": "4" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "2 + 1 + 2 = ?" },
+      "options": [
+        { "label": "4" },
+        { "label": "5", "correct": true },
+        { "label": "6" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "3 + 2 + 1 = ?" },
+      "options": [
+        { "label": "5" },
+        { "label": "6", "correct": true },
+        { "label": "7" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "2 + 3 + 3 = ?" },
+      "options": [
+        { "label": "7" },
+        { "label": "8", "correct": true },
+        { "label": "9" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "4 + 2 + 3 = ?" },
+      "options": [
+        { "label": "8" },
+        { "label": "9", "correct": true },
+        { "label": "10" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "5 + 3 + 2 = ?" },
+      "options": [
+        { "label": "9" },
+        { "label": "10", "correct": true },
+        { "label": "11" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "4 + 4 + 4 = ?" },
+      "options": [
+        { "label": "11" },
+        { "label": "12", "correct": true },
+        { "label": "13" },
+        { "label": "14" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "6 + 5 + 3 = ?" },
+      "options": [
+        { "label": "13" },
+        { "label": "14", "correct": true },
+        { "label": "15" },
+        { "label": "16" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "7 + 4 + 5 = ?" },
+      "options": [
+        { "label": "15" },
+        { "label": "16", "correct": true },
+        { "label": "17" },
+        { "label": "18" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "8 + 6 + 5 = ?" },
+      "options": [
+        { "label": "18" },
+        { "label": "19", "correct": true },
+        { "label": "20" },
+        { "label": "17" }
+      ]
+    }
+  ]
+}

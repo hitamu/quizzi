@@ -1,0 +1,133 @@
+/* Quizzi design system — vui, to rõ, tương phản cao, touch-first */
+:root {
+  --bg: #fff8e7;
+  --surface: #ffffff;
+  --ink: #2b2b40;
+  --muted: #7a7a90;
+
+  /* màu chủ đạo (quiz có thể override qua --theme, --theme-2) */
+  --theme: #ff6b6b;
+  --theme-2: #ffd23f;
+
+  --good: #34c759;
+  --retry: #ff9f1c;
+
+  --radius: 20px;
+  --radius-lg: 28px;
+  --hit: 56px;            /* vùng chạm tối thiểu cho tay nhỏ */
+  --gap: 16px;
+  --shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+
+  --font: 'Baloo 2', 'Comic Sans MS', 'Nunito', system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root { height: 100%; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+  font-size: clamp(18px, 2.6vw, 22px);
+  line-height: 1.4;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+
+/* nút bấm to, bo tròn, có "chân" đổ bóng cho cảm giác chạm */
+.btn {
+  min-height: var(--hit);
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12); }
+
+.btn-primary { background: var(--theme); color: #fff; }
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.input {
+  width: 100%;
+  max-width: 320px;
+  min-height: var(--hit);
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  border: 3px solid var(--theme-2);
+  font-family: inherit;
+  font-size: 24px;
+  text-align: center;
+}
+.input:focus { outline: none; border-color: var(--theme); }
+
+/* layout khung chung */
+.screen {
+  min-height: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: max(16px, env(safe-area-inset-top)) 20px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.center { align-items: center; text-align: center; justify-content: center; }
+
+/* vùng câu hỏi: chiếm hết chỗ trống và căn giữa theo chiều dọc */
+.stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+/* thanh trên: home | dots | timer */
+.topbar { display: flex; align-items: center; gap: 12px; }
+.timer {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  background: var(--surface);
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+
+/* đoạn văn đọc hiểu: căn trái, giãn dòng thoải mái, cuộn nếu dài */
+.passage {
+  padding: 20px;
+  text-align: left;
+  line-height: 1.7;
+  font-size: clamp(20px, 5.5vw, 24px);
+  max-height: 38vh;
+  overflow: auto;
+  border-left: 8px solid var(--theme);
+}
+
+h1 { font-size: clamp(28px, 6vw, 40px); }
+h2 { font-size: clamp(24px, 5vw, 32px); }
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+@keyframes pop { 0% { transform: scale(0.8); } 60% { transform: scale(1.08); } 100% { transform: scale(1); } }
+.pop { animation: pop 0.3s ease; }

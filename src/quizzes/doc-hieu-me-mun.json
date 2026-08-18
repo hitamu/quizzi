@@ -1,0 +1,54 @@
+{
+  "id": "doc-hieu-me-mun",
+  "title": "Bé Lan và mèo Mun",
+  "subject": "Đọc hiểu",
+  "theme": { "color": "#00a8a8", "color2": "#d6f5f5", "emoji": "📖" },
+  "passage": "Nhà bạn Lan có một con mèo tên là Mun. Mun có bộ lông màu đen mượt. Mỗi buổi sáng, Mun nằm ngủ bên cửa sổ có nắng. Lan cho Mun ăn cá. Lan rất yêu Mun.",
+  "questions": [
+    {
+      "type": "select",
+      "prompt": { "text": "Con mèo tên là gì?" },
+      "options": [
+        { "label": "Mun", "correct": true },
+        { "label": "Bông" },
+        { "label": "Vàng" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Bộ lông của Mun màu gì?" },
+      "options": [
+        { "label": "Màu trắng" },
+        { "label": "Màu đen", "correct": true },
+        { "label": "Màu vàng" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Mỗi buổi sáng Mun làm gì?" },
+      "options": [
+        { "label": "Chạy ra sân" },
+        { "label": "Nằm ngủ bên cửa sổ", "correct": true },
+        { "label": "Trèo lên cây" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Lan cho Mun ăn gì?" },
+      "options": [
+        { "label": "Cá", "correct": true },
+        { "label": "Cơm" },
+        { "label": "Bánh" }
+      ]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Tình cảm của Lan với Mun thế nào?" },
+      "options": [
+        { "label": "Rất yêu Mun", "correct": true },
+        { "label": "Không thích Mun" },
+        { "label": "Sợ Mun" }
+      ]
+    }
+  ]
+}

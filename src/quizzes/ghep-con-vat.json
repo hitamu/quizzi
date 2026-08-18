@@ -1,0 +1,109 @@
+{
+  "id": "ghep-con-vat",
+  "title": "Ghép con vật",
+  "subject": "Tự nhiên",
+  "theme": { "color": "#4d96ff", "color2": "#dbe9ff", "emoji": "🐣" },
+  "questions": [
+    {
+      "type": "dragdrop",
+      "prompt": { "text": "Kéo mỗi con vật về đúng tên nhé!" },
+      "items": [
+        { "id": "cho", "label": "🐶" },
+        { "id": "meo", "label": "🐱" },
+        { "id": "ca", "label": "🐟" }
+      ],
+      "targets": [
+        { "id": "t1", "label": "Con chó", "accepts": "cho" },
+        { "id": "t2", "label": "Con mèo", "accepts": "meo" },
+        { "id": "t3", "label": "Con cá", "accepts": "ca" }
+      ]
+    },
+    {
+      "type": "dragdrop",
+      "prompt": { "text": "Ghép 4 con vật với đúng tên." },
+      "items": [
+        { "id": "tho", "label": "🐰" },
+        { "id": "voi", "label": "🐘" },
+        { "id": "lon", "label": "🐷" },
+        { "id": "ga", "label": "🐔" }
+      ],
+      "targets": [
+        { "id": "t1", "label": "Con thỏ", "accepts": "tho" },
+        { "id": "t2", "label": "Con voi", "accepts": "voi" },
+        { "id": "t3", "label": "Con lợn", "accepts": "lon" },
+        { "id": "t4", "label": "Con gà", "accepts": "ga" }
+      ]
+    },
+    {
+      "type": "dragdrop",
+      "prompt": { "text": "Con vật nào thích ăn gì? Kéo cho đúng." },
+      "items": [
+        { "id": "meo", "label": "🐱" },
+        { "id": "tho", "label": "🐰" },
+        { "id": "khi", "label": "🐵" }
+      ],
+      "targets": [
+        { "id": "t1", "label": "Thích ăn cá 🐟", "accepts": "meo" },
+        { "id": "t2", "label": "Thích ăn cà rốt 🥕", "accepts": "tho" },
+        { "id": "t3", "label": "Thích ăn chuối 🍌", "accepts": "khi" }
+      ]
+    },
+    {
+      "type": "dragdrop",
+      "prompt": { "text": "Con vật sống ở đâu? Kéo cho đúng." },
+      "items": [
+        { "id": "ca", "label": "🐟" },
+        { "id": "chim", "label": "🐦" },
+        { "id": "cho", "label": "🐶" }
+      ],
+      "targets": [
+        { "id": "t1", "label": "Dưới nước 🌊", "accepts": "ca" },
+        { "id": "t2", "label": "Trên tổ ở cây 🪺", "accepts": "chim" },
+        { "id": "t3", "label": "Trong chuồng 🏠", "accepts": "cho" }
+      ]
+    },
+    {
+      "type": "dragdrop",
+      "prompt": { "text": "Con vật kêu thế nào? Kéo cho đúng." },
+      "items": [
+        { "id": "cho", "label": "🐶" },
+        { "id": "meo", "label": "🐱" },
+        { "id": "ga", "label": "🐔" }
+      ],
+      "targets": [
+        { "id": "t1", "label": "Gâu gâu", "accepts": "cho" },
+        { "id": "t2", "label": "Meo meo", "accepts": "meo" },
+        { "id": "t3", "label": "Ò ó o", "accepts": "ga" }
+      ]
+    },
+    {
+      "type": "dragdrop",
+      "prompt": { "text": "Ghép các con vật với đúng tên." },
+      "items": [
+        { "id": "sutu", "label": "🦁" },
+        { "id": "bo", "label": "🐮" },
+        { "id": "vit", "label": "🦆" },
+        { "id": "rua", "label": "🐢" }
+      ],
+      "targets": [
+        { "id": "t1", "label": "Sư tử", "accepts": "sutu" },
+        { "id": "t2", "label": "Con bò", "accepts": "bo" },
+        { "id": "t3", "label": "Con vịt", "accepts": "vit" },
+        { "id": "t4", "label": "Con rùa", "accepts": "rua" }
+      ]
+    },
+    {
+      "type": "dragdrop",
+      "prompt": { "text": "Con nào bay, con nào bơi? (Có 1 con không thuộc ô nào nhé!)" },
+      "items": [
+        { "id": "chim", "label": "🐦" },
+        { "id": "ca", "label": "🐠" },
+        { "id": "rua", "label": "🐢" }
+      ],
+      "targets": [
+        { "id": "t1", "label": "Bay trên trời ✈️", "accepts": "chim" },
+        { "id": "t2", "label": "Bơi dưới biển 🌊", "accepts": "ca" }
+      ]
+    }
+  ]
+}

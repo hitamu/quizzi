@@ -1,0 +1,58 @@
+{
+  "id": "chu-cai",
+  "title": "Chữ cái",
+  "subject": "Tiếng Việt",
+  "theme": { "color": "#9b59b6", "color2": "#efe0f7", "emoji": "🔤" },
+  "questions": [
+    {
+      "type": "select",
+      "prompt": { "text": "Chữ cái đầu tiên trong bảng chữ cái là chữ gì?" },
+      "options": [{ "label": "A", "correct": true }, { "label": "B" }, { "label": "C" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Chữ nào là nguyên âm?" },
+      "options": [{ "label": "M" }, { "label": "O", "correct": true }, { "label": "N" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Từ \"BÀ\" bắt đầu bằng chữ gì?" },
+      "options": [{ "label": "A" }, { "label": "B", "correct": true }, { "label": "C" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Từ \"CÁ\" bắt đầu bằng chữ gì?" },
+      "options": [{ "label": "C", "correct": true }, { "label": "K" }, { "label": "G" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Từ \"HOA\" bắt đầu bằng chữ gì?" },
+      "options": [{ "label": "N" }, { "label": "H", "correct": true }, { "label": "K" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Chữ nào đứng trước trong bảng chữ cái?" },
+      "options": [{ "label": "A", "correct": true }, { "label": "C" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Chữ nào đứng ngay sau chữ B?" },
+      "options": [{ "label": "A" }, { "label": "C", "correct": true }, { "label": "D" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Từ nào bắt đầu bằng chữ \"M\"?" },
+      "options": [{ "label": "Mẹ", "correct": true }, { "label": "Bà" }, { "label": "Cá" }, { "label": "Nhà" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Ghép chữ \"B\" với vần \"AN\" thành tiếng gì?" },
+      "options": [{ "label": "BAN", "correct": true }, { "label": "BEN" }, { "label": "BON" }, { "label": "BAC" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Ghép chữ \"L\" với vần \"AN\" thành tiếng gì?" },
+      "options": [{ "label": "BAN" }, { "label": "LON" }, { "label": "LAN", "correct": true }, { "label": "LEN" }]
+    }
+  ]
+}

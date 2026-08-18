@@ -1,0 +1,58 @@
+{
+  "id": "dem-so",
+  "title": "Đếm số",
+  "subject": "Toán",
+  "theme": { "color": "#ff6b6b", "color2": "#ffe0e0", "emoji": "🔢" },
+  "questions": [
+    {
+      "type": "select",
+      "prompt": { "text": "Có mấy quả táo? 🍎🍎" },
+      "options": [{ "label": "1" }, { "label": "2", "correct": true }, { "label": "3" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Có mấy con cá? 🐟🐟🐟🐟" },
+      "options": [{ "label": "3" }, { "label": "4", "correct": true }, { "label": "5" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Số nào bé hơn?" },
+      "options": [{ "label": "3", "correct": true }, { "label": "8" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Số nào lớn hơn?" },
+      "options": [{ "label": "6" }, { "label": "9", "correct": true }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Số liền sau của 9 là?" },
+      "options": [{ "label": "8" }, { "label": "10", "correct": true }, { "label": "11" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Số liền trước của 10 là?" },
+      "options": [{ "label": "8" }, { "label": "9", "correct": true }, { "label": "11" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Đếm cách 2: 2, 4, 6, ... số tiếp theo là?" },
+      "options": [{ "label": "7" }, { "label": "8", "correct": true }, { "label": "10" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Đếm ngược: 10, 9, 8, ... số tiếp theo là?" },
+      "options": [{ "label": "6" }, { "label": "7", "correct": true }, { "label": "9" }, { "label": "11" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Số nào còn thiếu? 2, 4, ?, 8" },
+      "options": [{ "label": "3" }, { "label": "5" }, { "label": "6", "correct": true }, { "label": "7" }]
+    },
+    {
+      "type": "select",
+      "prompt": { "text": "Số nào lớn nhất?" },
+      "options": [{ "label": "12" }, { "label": "7" }, { "label": "15", "correct": true }, { "label": "9" }]
+    }
+  ]
+}
